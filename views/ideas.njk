@@ -1,0 +1,35 @@
+{% extends "layout.njk" %}
+{% set bodyId = "page-ideas" %} 
+
+{% block headTitle %}
+    <title>Ideias - Casa Criativa</title>
+{% endblock headTitle %}
+
+
+
+{% block content %}
+    <header>
+        <a href="/">
+            <img src="/logo.png" alt="Imagem da logomarca">
+        </a>
+        
+        <nav>
+            <li><a href="/">Início</a></li>
+            <li><a class="button" href="#" onclick="onOff()">Nova Ideia</a></li>       
+        </nav>
+    </header>
+    <section id="title">
+        <p>Em exibição</p>
+        <h1>Ideias</h1>
+    </section>
+    <main>
+        <section id="ideas">
+            {% include "_cardsIdeas.njk"%}
+        </section>
+    </main>
+    <footer id="footer">
+        Com ♥️ <a href="http://rocketseat.com.br" target="black">Rocketseat</a>
+    </footer>
+{% endblock content %}
+
+
